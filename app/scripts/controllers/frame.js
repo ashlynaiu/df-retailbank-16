@@ -31,7 +31,7 @@ angular.module('DF16Retail')
 				name: mobileNames[k],
 				show: false
 			};
-			if (mobileNames[k] === 'start') {
+			if (mobileNames[k] === 'alert') {
 				newVal.show = true;
 			}
 			$scope.mobileStates.push(newVal);

@@ -1,11 +1,6 @@
 ///////////////////////////
 ///////General Styles/////
 /////////////////////////
-.main-frame
-	overflow: scroll
-
-	img
-		width: 100%
 
 /////////////////////////////////////
 ///////UI View Animation Styles/////
@@ -14,6 +9,7 @@
 .transitionFrame
 	opacity: 1
 	transition: $standard-animate
+	height: 100%
 
 [ui-view].ng-enter, [ui-view].ng-leave
 	transition: $standard-animate
@@ -29,3 +25,23 @@
 
 [ui-view].ng-leave-active
 	opacity: 0
+
+////////////////////////
+///////Main Styles/////
+//////////////////////
+.main-frame
+	overflow: scroll
+	width: 100%
+	img
+		width: 100%
+
+// .desktopFrame
+// 	transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s
+
+// .desktopFrame.ng-enter,
+// .desktopFrame.ng-leave.ng-leave-active
+// 	opacity: 0
+
+// .desktopFrame.ng-leave,
+// .desktopFrame.ng-enter.ng-enter-active
+// 	opacity: 1
