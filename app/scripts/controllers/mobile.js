@@ -3,7 +3,11 @@
 angular.module('DF16Retail')
 	.controller('MobileCtrl', function ($scope, $state) {
 		$scope.$state = $state;
-		console.log($scope.mobileStates);
+
+		//Add background class to html element
+		var htmlDOM = angular.element( document.querySelector( 'html' ));
+		htmlDOM.addClass('mobile-background');
+
 		$scope.standardStep = function(currentStep) {
 			//Don't allow click at end of image loop
 			if(currentStep === $scope.mobileStates.length - 1) {
