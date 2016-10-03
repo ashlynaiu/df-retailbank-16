@@ -25,7 +25,7 @@ angular
       .state ('frame', {
         abstract: true,
         url: '/',
-        controller: 'FrameCtrl'
+        controller: 'FrameCtrl',
         templateUrl: 'views/frame.html'
       })
       .state ('navigation', {
