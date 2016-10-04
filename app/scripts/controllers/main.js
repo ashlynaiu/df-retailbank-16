@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('DF16Retail')
-	.controller('MainCtrl', function ($scope, $state) {
+	.controller('MainCtrl', function ($scope, $state, $timeout) {
 		$scope.$state = $state;
 		//Standard step through click function
 		$scope.standardStep = function(currentStep) {
@@ -14,7 +14,9 @@ angular.module('DF16Retail')
 				var current = currentStep;
 				var next = currentStep + 1;
 				$scope.desktopStates[next].show = true;
-				$scope.desktopStates[current].show = false;
+				$timeout(function() {
+					$scope.desktopStates[current].show = false;
+				}, 500);
 			}
 		};
 });
